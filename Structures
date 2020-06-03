@@ -1,0 +1,47 @@
+#include<stdio.h>
+struct Actor
+{
+char ActorName[50];
+char FilmIndustry[50];
+int ActorNo,TotalFilms;
+};
+int main()
+{
+int i,g=1;
+struct Actor e[50];
+for(i=0;i<2;i++)
+{
+	printf("Enter the data for Actor - %d\n",g);
+	g++;
+	scanf("%d\n",&e[i].ActorNo);
+	scanf("%s\n",e[i].ActorName);
+	scanf("%s\n",e[i].FilmIndustry);
+	scanf("%d",&e[i].TotalFilms);
+}
+printf("\n\n\n");
+for(i=0;i<2;i++)
+{
+	printf("Actor No = %d\n",e[i].ActorNo);
+	printf("Actor Name = %s\n",e[i].ActorName);
+	printf("Film Industry = %s\n",e[i].FilmIndustry);
+	printf("Total Films = %d\n\n",e[i].TotalFilms);
+}
+struct Actor *p;
+int sum=0;
+p=&e[50];
+for(i=0;i<2;i++)
+{
+
+	sum+=e[i].TotalFilms;
+	p++;
+}
+printf("\n\nSum of both of their Total Films = %d",sum);
+
+
+return 0;
+}
+
+
+
+
+
