@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<string.h>
+void duplicate(char a[]);
+int main()
+{
+	printf("\n\tWith Argument Without Return Type\n");
+	int i;
+	char a[50],original,replace;
+	printf("Enter the string\n");
+	gets(a);
+	duplicate(a);
+	return 0;
+}
+void duplicate(char a[])
+{
+int i;
+char original,replace;
+printf("\nEnter the character to change\n");
+original=getchar();
+printf("Enter the character to replace\n");
+getchar();
+replace=getchar();
+for(i=0;i<strlen(a);i++)
+{
+if(a[i]==original)
+{
+a[i]=replace;
+}
+}
+puts(a);
+}
